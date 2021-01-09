@@ -17,7 +17,7 @@ export const createContainer = ({
   waveContainer.style.width = '100%'
   waveContainer.style.height = '100%'
   waveContainer.style.position = 'absolute'
-  waveContainer.style.borderRadius = `${borderTopLeftRadius} ${borderTopRightRadius} ${borderBottomRightRadius} ${borderBottomLeftRadius}`
+  waveContainer.style.borderRadius = `${(parseInt(borderTopLeftRadius) - 2) + 'px'} ${(parseInt(borderTopRightRadius) - 2) + 'px'} ${(parseInt(borderBottomLeftRadius) - 2) + 'px'} ${(parseInt(borderBottomRightRadius) - 2) + 'px'}`
   waveContainer.style.overflow = 'hidden'
   waveContainer.style.pointerEvents = 'none'
   return waveContainer
