@@ -12,12 +12,18 @@ export const createContainer = ({
   borderBottomRightRadius
 }: CSSStyleDeclaration) => {
   const waveContainer = document.createElement('div')
+
+  borderTopLeftRadius = parseInt(borderTopLeftRadius, 10) - 2 + 'px'
+  borderTopRightRadius = parseInt(borderTopRightRadius, 10) - 2 + 'px'
+  borderBottomLeftRadius = parseInt(borderBottomLeftRadius, 10) - 2 + 'px'
+  borderBottomRightRadius = parseInt(borderBottomRightRadius, 10) - 2 + 'px'
+
   waveContainer.style.top = '0'
   waveContainer.style.left = '0'
   waveContainer.style.width = '100%'
   waveContainer.style.height = '100%'
   waveContainer.style.position = 'absolute'
-  waveContainer.style.borderRadius = `${(parseInt(borderTopLeftRadius) - 2) + 'px'} ${(parseInt(borderTopRightRadius) - 2) + 'px'} ${(parseInt(borderBottomLeftRadius) - 2) + 'px'} ${(parseInt(borderBottomRightRadius) - 2) + 'px'}`
+  waveContainer.style.borderRadius = `${borderTopLeftRadius} ${borderTopRightRadius} ${borderBottomRightRadius} ${borderBottomLeftRadius}`
   waveContainer.style.overflow = 'hidden'
   waveContainer.style.pointerEvents = 'none'
   return waveContainer
