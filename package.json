@@ -1,5 +1,5 @@
 {
-  "name": "v-wave",
+  "name": "@mkuchak/v-wave",
   "version": "1.1.0",
   "description": "The material-ripple directive for Vue that actually works",
   "main": "dist/index.js",
